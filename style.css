@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+input {
+    padding: 10px;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.recipe {
+    margin-top: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.recipe img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.recipe h3 {
+    margin: 10px 0;
+}
+
+/* Dark mode styles */
+body.dark {
+    background-color: #222;
+    color: #eee;
+}
+
+body.dark .recipe {
+    background-color: #333;
+}
+
+body.dark input,
+body.dark button {
+    background-color: #444;
+    color: #eee;
+    border: 1px solid #666;
+}
+
+body.dark button:hover {
+    background-color: #218838;
+}
+
+/* Featured Section */
+#featured {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#featured h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.featured-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.featured-item {
+    text-decoration: none;
+    color: inherit;
+    width: 200px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.featured-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.featured-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Dark mode support for featured */
+body.dark .featured-item {
+    background-color: #333;
+    color: #eee;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+body.dark .featured-item:hover {
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+.controls, .filters {
+    margin-bottom: 20px;
+}
+
+.filters select {
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.favorite-btn {
+    background-color: #ff4d4d;
+    margin-top: 10px;
+}
+
+.favorite-btn:hover {
+    background-color: #e60000;
+}
+#random-section {
+    margin: 30px 0;
+    text-align: center;
+}
+#submit-recipe {
+    margin-top: 40px;
+    text-align: center;
+}
+#submit-recipe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+#submit-recipe input,
+#submit-recipe textarea {
+    width: 80%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+#user-recipes {
+    margin-top: 40px;
+    text-align: center;
+}
+#toggleSubmitForm {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#toggleSubmitForm:hover {
+    background-color: #0056b3;
+}
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .recipe, .recipe * {
+        visibility: visible;
+    }
+    .recipe {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

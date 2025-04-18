@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+    <h1>🍳 Recipe Finder</h1>
+
+    <div class="controls">
+        <input type="text" id="search" placeholder="Enter a meal or ingredient..." />
+        <button onclick="searchRecipe()">Search</button>
+        <button onclick="getRandomRecipe()">🎲 Random</button>
+        <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </div>
+
+    <div class="filters">
+        <select id="categorySelect" onchange="filterByCategory()">
+        <option value="">All Categories</option>
+        </select>
+        <select id="areaSelect" onchange="filterByArea()">
+        <option value="">All Cuisines</option>
+        </select>
+    </div>
+    <div id="random-section">
+        <h2>🎲 Random Picks</h2>
+        <div id="random-recipes" class="featured-grid"></div>
+    </div>
+
+    <div id="user-recipes">
+        <h2>🍲 Your Recipes</h2>
+        <div class="featured-grid" id="user-recipes-grid"></div>
+    </div>
+
+    <div id="results"></div>
+
+    <h2>💖 Favorite Recipes</h2>
+    <div id="favorites"></div>
+    </div>
+    <button onclick="window.print()">🖨️ Print Recipe</button>
+
+    <button id="toggleSubmitForm">➕ Submit a Recipe</button>
+
+    <div id="submit-recipe">
+        <h2>📝 Submit Your Recipe</h2>
+
+        <form id="recipeForm">
+            <input type="text" id="userTitle" placeholder="Recipe Name" required><br>
+            <textarea id="userIngredients" placeholder="Ingredients (comma separated)" required></textarea><br>
+            <textarea id="userInstructions" placeholder="Instructions" required></textarea><br>
+            <input type="text" id="userImage" placeholder="Image URL (optional)"><br>
+            <button type="submit">Add Recipe</button>
+        </form> 
+    </div>
+<script src="script.jsx"></script>
+</body>
+</html>
